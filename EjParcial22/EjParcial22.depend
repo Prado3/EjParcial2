@@ -1,0 +1,39 @@
+# depslib dependency file v1.0
+1698245880 source:c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\registromedico.c
+	"registroMedico.h"
+
+1698271762 c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\registromedico.h
+
+1698334282 source:c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\main.c
+	<stdio.h>
+	<stdlib.h>
+	<string.h>
+	"registroMedico.h"
+	"celdaEspecialidades.h"
+
+1698271809 source:c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\especialidadmedica.c
+	"especialidadMedica.h"
+
+1698256315 c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\especialidadmedica.h
+
+1698329153 source:c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\celdaespecialidades.c
+	"celdaEspecialidades.h"
+	"nodoPaciente.h"
+
+1698271453 c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\celdaespecialidades.h
+	"especialidadMedica.h"
+	"nodoPaciente.h"
+
+1698329357 c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\nodopaciente.h
+	"paciente.h"
+
+1698256315 c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\paciente.h
+
+1698329904 source:c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\nodopaciente.c
+	"nodoPaciente.h"
+	<stdlib.h>
+	<stdio.h>
+
+1698256659 source:c:\users\usuario\documents\plantillas personalizadas de office\lucas\ejparcial22\paciente.c
+	"paciente.h"
+
