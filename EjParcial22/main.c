@@ -16,12 +16,15 @@ int agregarEspecialidadMedica(char especialidad[],stCelda adl[],int v, int dim);
 int buscarEspecialidad(char espe[],stCelda adl[],int v);
 int buscarRecursivoArbol(nodoPaciente* arbol,int flag, char nombre[], char apellido[]);
 int buscarPaciente(stCelda adl[], int v,char nombre[],char apellido[],char espe[]);
+void cantidadPacientesPorMateria(stCelda adl[],int v);
+int contcarNodos(nodoPaciente* arbol, int cant);
 
 int main()
 {
     stCelda adl[DIM];
     int v=0;
     int flag=0;
+    int cant=0;
     char espe[12];
     char nombre[30];
     char apellido[30];
@@ -38,16 +41,17 @@ int main()
     //}else{
     //    printf("\n Se encontro la especialidad %s",espe);
     //}
-    printf("\n ingrese nombre paciente: ");
-    gets(nombre);
-    printf("\n ingrese apellido paciente: ");
-    gets(apellido);
-    flag=buscarPaciente(adl,v,nombre,apellido,espe);
-    if(flag==0){
-        printf("\n Nose se encuentra el paciente %s %s", nombre, apellido);
-    }else{
-        printf("\n Se encontro el paciente %s %s en la especialidad %s",nombre,apellido,espe);
-    }
+    //printf("\n ingrese nombre paciente: ");
+    //gets(nombre);
+    //printf("\n ingrese apellido paciente: ");
+    //gets(apellido);
+    //flag=buscarPaciente(adl,v,nombre,apellido,espe);
+    //if(flag==0){
+    //    printf("\n Nose se encuentra el paciente %s %s", nombre, apellido);
+    //}else{
+    //    printf("\n Se encontro el paciente %s %s en la especialidad %s",nombre,apellido,espe);
+    //}
+    cantidadPacientesPorMateria(adl,v);
     mostrarEstructuraCompleta(adl,v);
     return 0;
 }
@@ -150,6 +154,25 @@ int buscarRecursivoArbol(nodoPaciente* arbol,int flag, char nombre[], char apell
         }
     }
     return flag;
+}
+
+void cantidadPacientesPorMateria(stCelda adl[],int v){
+    int i=0;
+    while(i<v){
+        int cant=0;
+        cant = contcarNodos(adl[i].listaPaciente, cant);
+        printf("\n la cantidad de pacientes en la especialidad %s es de %d",adl[i].dato.especialidadMedica,cant);
+        i++;
+    }
+}
+
+int contcarNodos(nodoPaciente* arbol, int cant){
+    if(arbol){
+        cant = contcarNodos(arbol->izq,cant);
+        cant = contcarNodos(arbol->der,cant);
+        cant++;
+    }
+    return cant;
 }
 
 
